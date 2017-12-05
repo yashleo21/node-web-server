@@ -70,7 +70,13 @@ app.get('/bad', (req, res) => {
   res.send({
     errorMessage : 'Error handling request :('
   });
-})
+});
+
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Project Page Central'
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
